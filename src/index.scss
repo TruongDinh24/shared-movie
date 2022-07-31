@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  padding: 10px 30px;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 2px solid black;
+
+  .form-sign-in-up {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .logged-in-state {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.movie-list {
+  padding: 50px 100px;
+
+  .movie-item {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 30px;
+    max-height: 400px;
+    .info {
+      display: flex;
+      flex-direction: column;
+
+      .title {
+        color: red;
+        font-weight: 600;
+      }
+      .description {
+        max-height: 200px;
+        margin-top: 10px;
+        overflow-y: auto;
+      }
+    }
+  }
+}
+
+.share-movie {
+  width: 50%;
+  padding-top: 100px;
+  margin: 0 auto;
+
+  fieldset{
+    padding: 20px 30px;
+  }
+
+  form{
+    display: flex;
+    gap: 15px;
+    input{
+      width: 500px;
+    }
+  }
+}
