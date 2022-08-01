@@ -5,10 +5,11 @@ let SignInUp = () => {
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
   let { signIn } = authContext();
+  console.log("authContext()", authContext());
 
-  let handleSubmit = async (e) => {
+  let handleSubmit = (e) => {
     e.preventDefault();
-    await signIn(email, password);
+    signIn(email, password);
   };
 
   return (

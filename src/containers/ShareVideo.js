@@ -1,22 +1,17 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useVideoContext } from "../context";
 
 let ShareVideo = () => {
   let navigate = useNavigate();
+  const { shareVideo } = useVideoContext();
   let [url, setUrl] = useState("");
   let handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await axios.post("/api/movies", {
-        url,
-      });
-      setUrl("");
-      navigate("/");
-    } catch (err) {
-      let { errors } = await err.json();
-      alert(errors[0].message);
-    }
+    shareVideo(url);
+    setUrl("");
+    navigate("/");
   };
 
   return (

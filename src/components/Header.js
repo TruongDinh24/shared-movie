@@ -14,7 +14,7 @@ let LoggedIn = () => {
           navigate("/share");
         }}
       >
-        Share a movie
+        Share a video
       </button>
       <button onClick={signOut}>Logout</button>
     </div>

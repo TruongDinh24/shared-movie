@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+p {
+  margin: 0;
+}
+
 .App {
   padding: 10px 30px;
   height: 100vh;
@@ -48,9 +52,8 @@ code {
     .info {
       display: flex;
       flex-direction: column;
-
       .title {
-        color: red;
+        color: rgb(35, 133, 210);
         font-weight: 600;
       }
       .description {

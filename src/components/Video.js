@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
+import { useVideoContext } from "../context";
 
 const VideoItem = ({ item }) => {
   return (
@@ -30,12 +30,7 @@ const VideoItem = ({ item }) => {
 };
 
 const Videos = () => {
-  let [videos, setVideos] = useState();
-  useEffect(async () => {
-    axios.get("/api/movies").then((res) => {
-      setVideos(res.data.movies);
-    });
-  }, []);
+  const { videos } = useVideoContext();
 
   return (
     <div className="movie-list">

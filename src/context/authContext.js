@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 
 export let AuthContext = React.createContext({
   authUser: null,
-  signIn: async (email, password) => {},
+  signIn: (email, password) => {},
   signOut: () => {},
 });
 
-let authContext = () => useContext(AuthContext);
+let useAuthContext = () => useContext(AuthContext);
 
-export default authContext;
+export default useAuthContext;
