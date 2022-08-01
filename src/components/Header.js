@@ -1,9 +1,9 @@
-import { useAuth } from "../hooks";
+import { authContext } from "../context";
 import SignInUpForm from "./SignInUp";
 import { useNavigate, Link } from "react-router-dom";
 
 let LoggedIn = () => {
-  const { authUser, signOut } = useAuth();
+  const { authUser, signOut } = authContext();
   let navigate = useNavigate();
   return (
     <div className="logged-in-state">
@@ -22,11 +22,11 @@ let LoggedIn = () => {
 };
 
 const Header = () => {
-  const { authUser } = useAuth();
+  const { authUser } = authContext();
   return (
     <div className="header">
       <Link to="/" style={{ textDecoration: "none", color: "#2385d2" }}>
-        <h2>Shared Movies</h2>
+        <h2>Shared Videos</h2>
       </Link>
       {authUser ? <LoggedIn /> : <SignInUpForm />}
     </div>

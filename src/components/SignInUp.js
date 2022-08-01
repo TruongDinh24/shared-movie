@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { useAuth } from "../hooks";
+import { authContext } from "../context";
 
 let SignInUp = () => {
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
-  let { signIn } = useAuth();
+  let { signIn } = authContext();
 
   let handleSubmit = async (e) => {
     e.preventDefault();

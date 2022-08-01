@@ -6,6 +6,6 @@ export let AuthContext = React.createContext({
   signOut: () => {},
 });
 
-let useAuth = () => useContext(AuthContext);
+let authContext = () => useContext(AuthContext);
 
-export default useAuth;
+export default authContext;

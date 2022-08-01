@@ -1,7 +1,7 @@
 import jwt_decode from "jwt-decode";
 import jwt_encode from "jwt-encode";
 import { useState } from "react";
-import { AuthContext } from "../hooks/useAuth";
+import { AuthContext } from "../context/authContext";
 
 let getAuthUser = () => {
   try {
